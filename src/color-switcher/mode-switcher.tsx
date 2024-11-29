@@ -24,7 +24,7 @@ export default function ModeSwitcher() {
           {mode === 'Day' ? <img src={moon} /> : <img src={sun} />}
         </div>
       </div>
-      <SearchBar colorSwitch={ColorSwitch} mode = {mode} />
+      <SearchBar mode = {mode} />
     </>
   );
 }
