@@ -3,9 +3,11 @@ import moon from '../../src/assets/moon.svg';
 import sun from '../../src/assets/sun.svg';
 import SearchBar from '../search-bar/searchBar';
 import { ColorSwitch } from '../style-switcher/style-switcher';
-
-export default function ModeSwitcher() {
-  const [mode, setMode] = useState<string>('Day');
+interface ModeSwitcherProps {
+  mode: string;
+  setMode: (newMode: string) => void;
+}
+export default function ModeSwitcher({mode,setMode}:ModeSwitcherProps) {
   return (
     <>
       <div className="Color-switcher w-[90%] h-[30vh] flex justify-around items-center cursor-pointer	">

@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import ColorSwitcher from './color-switcher/mode-switcher';
 import PlaceHolder from './placeholder/placeholder';
 import './App.css';
+import ModeSwitcher from './color-switcher/mode-switcher';
 
 function App() {
+  const [mode, setMode] = useState<string>('Day');
   return (
     <>
       <div className='flex flex-col items-center gap-[10px]'>
-        <ColorSwitcher />
+        <ModeSwitcher mode = {mode} setMode = {setMode}/>
       </div>
     </>
   );
